@@ -20,7 +20,6 @@ public class Simulering {
 //		Metode som triller en terning 100 ganger og setter tallene inn i en tabell
 		
 		Terning terning = new Terning();
-	    int[][] tabell = new int[5][20];
 
 	    for (int rad = 0; rad < 5; rad++) {
 	        for (int kolonne = 0; kolonne < 20; kolonne++) {

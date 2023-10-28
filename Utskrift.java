@@ -11,7 +11,6 @@ public class Utskrift {
 		
 		Simulering sim = new Simulering();
 		sim.settInnITabell();
-		System.out.print(sim.tabell);
 		
 		
 		System.out.println("TERNINGKASTSIMULATOR \n");
