@@ -9,6 +9,7 @@ public class Simulering {
 	int antallRader;
 	int antallKolonner;
 	int[][] tabell;
+	int antallKast;
 	
 	public Simulering() {
 		antallRader = 5;
@@ -18,7 +19,6 @@ public class Simulering {
 	
 	public int[][] settInnITabell() {
 //		Metode som triller en terning 100 ganger og setter tallene inn i en tabell
-		
 		Terning terning = new Terning();
 
 	    for (int rad = 0; rad < 5; rad++) {
@@ -29,6 +29,27 @@ public class Simulering {
 	    }
 
 	    return tabell;
+	}
+	
+	public void skrivUt() {
+//		Skriver ut den to-dimensjonale tabellen
+		
+		for (int i[] : tabell) {
+			for (int j : i) {
+				System.out.print(j + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public int antallKast() {
+		
+		for (int i[] : tabell) {
+			for (int j : i) {
+				antallKast++;
+			}
+		}
+		return antallKast;
 	}
 	
 	public int[] tabellAvVerdier() {

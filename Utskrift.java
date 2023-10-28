@@ -14,15 +14,8 @@ public class Utskrift {
 		
 		
 		System.out.println("TERNINGKASTSIMULATOR \n");
-		
-		for (int i[] : sim.tabell) {
-			for (int j : i) {
-				System.out.print(j + " ");
-			}
-			System.out.println();
-		}
-		
-		System.out.println("\nAntall kast: 100");
+		sim.skrivUt();
+		System.out.println("\nAntall kast: " + sim.antallKast());
 		sim.hvorMangePerVerdi();
 		System.out.println("\nGjennomsnittskast: "+ sim.gjennomsnitt() + "\n");
 		System.out.println("Antall kast for å få den første 6-eren: " + sim.forsteSekser() + "\n");
