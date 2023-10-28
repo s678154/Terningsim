@@ -6,30 +6,33 @@ public class Simulering {
 //	med plass til 100 elementer . Metodene i klassen skal finne ut hvor mange kast 
 //	det ble av hver verdi og legge de i en tabell med plass til seks elementer. 
 //	Nøtt: Prøv å få til det siste uten å bruke if eller switch.	
-	static int antallRader = 5;
-	static int antallKolonner = 20;
-	static int[][] tabell = new int[antallRader][antallKolonner];
+	int antallRader;
+	int antallKolonner;
+	int[][] tabell;
 	
-	public static void main(String[] args) {
+	public Simulering() {
+		antallRader = 5;
+		antallKolonner = 20;
+		tabell = new int[antallRader][antallKolonner];
 	}
 	
-	public static int[][] settInnITabell() {
+	public int[][] settInnITabell() {
 //		Metode som triller en terning 100 ganger og setter tallene inn i en tabell
 		
-		 Terning terning = new Terning();
-		    int[][] tabell = new int[5][20];
+		Terning terning = new Terning();
+	    int[][] tabell = new int[5][20];
 
-		    for (int rad = 0; rad < 5; rad++) {
-		        for (int kolonne = 0; kolonne < 20; kolonne++) {
-		        	terning.trill();
-		            tabell[rad][kolonne] = terning.getOyne();
-		        }
-		    }
+	    for (int rad = 0; rad < 5; rad++) {
+	        for (int kolonne = 0; kolonne < 20; kolonne++) {
+	        	terning.trill();
+	            tabell[rad][kolonne] = terning.getOyne();
+	        }
+	    }
 
-		    return tabell;
+	    return tabell;
 	}
 	
-	public static int[] tabellAvVerdier() {
+	public int[] tabellAvVerdier() {
 //		Metode som lager og returnerer en tabell av hvor mange av per verdi som har blitt
 //		kastet. Husk: Enere står på plass 0, Toere på plass 1 osv...
 		
@@ -48,7 +51,7 @@ public class Simulering {
 		   return tabellAvVerdier; 
 	}
 	
-	public static void hvorMangePerVerdi() {
+	public void hvorMangePerVerdi() {
 //		Metode som printer ut hvor mange av per verdi (1-ere til 6-ere) som blir kastet
 		
 		
@@ -61,7 +64,7 @@ public class Simulering {
 	    }	
 	}
 
-	public static double gjennomsnitt() {
+	public double gjennomsnitt() {
 //		metode som finner og returnerer gjennomsnittet på terningene på de 100 kastene 
 
 		int tilsammen = 0;
@@ -76,7 +79,7 @@ public class Simulering {
 		return gjennomsnittskast;
 	}
 	
-	public static int forsteSekser() {
+	public int forsteSekser() {
 //		Metode som finner den første sekseren i tabellen og returnerer antall kast for å 
 //		finne denne sekseren
 		
@@ -95,7 +98,7 @@ public class Simulering {
 		return -1;	
 	}
 
-	public static int flestAv() {
+	public int flestAv() {
 		//Metode som finner hvilket tall som ble oftest trilt på terningen i simulatoren
 		
 		int[] tabellAvVerdier = tabellAvVerdier();
