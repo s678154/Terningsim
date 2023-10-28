@@ -1,4 +1,4 @@
-package no.hvl.dat100;
+package no.hvl.dat100;d
 
 public class Utskrift {
 
@@ -24,7 +24,7 @@ public class Utskrift {
 		System.out.println("Antall kast   : 100");
 		Simulering.hvorMangePerVerdi();
 		System.out.println();
-		System.out.println(Simulering.gjennomsnitt() + "\n");
+		System.out.println("Gjennomsnittskast: "+ Simulering.gjennomsnitt() + "\n");
 		System.out.println("Antall kast for å få den første 6-eren :" + Simulering.forsteSekser() + "\n");
 		System.out.println("Terningverdi det var flest av : " + Simulering.flestAv() + "\n");
 	}
